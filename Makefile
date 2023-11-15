@@ -68,7 +68,7 @@ test-release:
 	goreleaser release --rm-dist --skip-publish --snapshot
 
 
-PROJECT := truffle-scanner
+PROJECT := trufflehog
 REVISION := latest
 
 BUILD_VENDOR := go mod vendor && chmod -R +w vendor
