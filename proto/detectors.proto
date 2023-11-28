@@ -714,7 +714,7 @@ enum DetectorType {
   Goshippo = 703;
   Sigopt = 704;
   Sugester = 705;
-  Viewneo = 706; 
+  Viewneo = 706;
   BoostNote = 707;
   CaptainData = 708;
   Checkvist = 709;
@@ -976,6 +976,7 @@ enum DetectorType {
   Overloop = 965;
   Ngrok = 966;
   Replicate = 967;
+  CiscoMerakiAPIToken = 968;
 }
 
 message Result {

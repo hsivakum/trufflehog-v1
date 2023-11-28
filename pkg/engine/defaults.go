@@ -122,6 +122,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/checkvist"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/cicero"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/circleci"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ciscomerakiapitoken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/clarifai"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/clearbit"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/clickhelp"
@@ -1586,6 +1587,7 @@ func DefaultDetectors() []detectors.Detector {
 		&overloop.Scanner{},
 		ngrok.Scanner{},
 		replicate.Scanner{},
+		ciscomerakiapitoken.Scanner{},
 	}
 
 }
