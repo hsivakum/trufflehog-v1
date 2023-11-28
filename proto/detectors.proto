@@ -977,6 +977,7 @@ enum DetectorType {
   Ngrok = 966;
   Replicate = 967;
   CiscoMerakiAPIToken = 968;
+  FordAPIToken = 969;
 }
 
 message Result {

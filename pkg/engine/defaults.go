@@ -266,6 +266,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flowflu"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flutterwave"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/fmfw"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/fordapitoken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/formbucket"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/formcraft"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/formio"
@@ -1588,6 +1589,7 @@ func DefaultDetectors() []detectors.Detector {
 		ngrok.Scanner{},
 		replicate.Scanner{},
 		ciscomerakiapitoken.Scanner{},
+		fordapitoken.Scanner{},
 	}
 
 }
