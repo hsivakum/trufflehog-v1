@@ -122,6 +122,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/checkvist"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/cicero"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/circleci"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ciscomerakiapitoken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/clarifai"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/clearbit"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/clickhelp"
@@ -265,6 +266,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flowflu"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flutterwave"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/fmfw"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/fordapitoken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/formbucket"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/formcraft"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/formio"
@@ -1586,6 +1588,8 @@ func DefaultDetectors() []detectors.Detector {
 		&overloop.Scanner{},
 		ngrok.Scanner{},
 		replicate.Scanner{},
+		ciscomerakiapitoken.Scanner{},
+		fordapitoken.Scanner{},
 	}
 
 }

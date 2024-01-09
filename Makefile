@@ -66,3 +66,17 @@ snifftest:
 
 test-release:
 	goreleaser release --rm-dist --skip-publish --snapshot
+
+
+PROJECT := trufflehog
+REVISION := latest
+
+BUILD_VENDOR := go mod vendor && chmod -R +w vendor
+
+install_deps:
+	docker compose -f infrastructure/build.yaml --project-name $(PROJECT) \
+	run --rm build-env /bin/sh -c "apk update && apk add git && $(BUILD_VENDOR)"
+
+build: install_deps
+	docker compose -f infrastructure/build.yaml --project-name $(PROJECT) \
+	run --rm build-env /bin/sh -c "go build -mod=vendor -o ./bin/$(PROJECT)"
